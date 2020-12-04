@@ -9,190 +9,625 @@
         .shower {
             --slide-ratio: calc(16 / 9);
         }
+        .slide h2 {
+            color: #222;
+        }
+        .slide::after {
+            background-image: none;
+            background-color: var(--color-blue);
+            width: 55px;
+            height: 55px;
+            padding-top: 0;
+            line-height: 55px;
+            top: 20px;
+            border-radius: 50%;
+        }
     </style>
 </head>
 <body class="shower list">
 
     <header class="caption">
-        <h1>Shower Presentation Engine</h1>
-        <p>Yours Truly, Famous Inc.</p>
+        <h1>Версия для слабовидящих? А можно не надо?</h1>
+        <p>by Lena Ryan</p>
     </header>
 
     <section class="slide" id="cover">
-        <h2>Shower Presentation Engine</h2>
-        <p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
-        <figure>
-            <img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
-            <figcaption class="copyright right white">
-                <a href="http://fiftyfootshadows.net/">© John Carey</a>
-            </figcaption>
-        </figure>
+        <h2 class="top">Версия для слабовидящих?</h2>
+        <h2 class="bottom">А можно не надо?</h2>
+        <img class="cover" src="pictures/ne-nado.jpg" alt="meme cat who says please dont">
         <style>
+            #cover {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
             #cover h2 {
-                margin: 30px 0 0;
-                color: white;
+                color: #222;
                 text-align: center;
-                font-size: 70px;
+                margin-top: 0;
             }
 
-            #cover p {
-                margin: 10px 0 0;
-                text-align: center;
-                color: white;
-                font-style: italic;
-                font-size: 20px;
+            #cover h2.top {
+                font-size: 80px;
             }
 
-            #cover p a {
-                color: white;
+            #cover h2.bottom {
+                font-size: 60px;
+                margin-bottom: 70px;
+            }
+
+            #cover .cover {
+                max-height: unset;
+                width: 100%;
+                object-fit: cover;
+                opacity: 0.6;
+            }
+
+            #cover:after {
+                opacity: 0;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="slide-about">
+        <div class="left-side">
+        <h2>Кто я?</h2>
+        <ul>
+            <li>Верстаю в компании AISA</li>
+            <li>Борец за вёрстку кнопок кнопками</li>
+            <li>Модерирую чат Веб-стандартов в&nbsp;Телеграме: <a href="https://t.me/webstandards_chat">@webstandards_chat</a></li>
+            <li>Катаюсь на сноуборде и&nbsp;сёрф-скейте</li>
+        </ul>
+        </div>
+        <img src="/pictures/me.jpg" alt="Lena Ryan">
+
+        <style>
+            #slide-about {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+            }
+
+            #slide-about li {
+                line-height: 1.5;
+                margin-bottom: 10px;
+            }
+
+            #slide-about img {
+                display: block;
+                width: 355px;
+                position: relative;
+                top: -25px;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="slide-2">
+        <blockquote>
+            <p>- А вы поддерживаете доступность на&nbsp;своём сайте?</p>
+            <p>- Да, у нас есть версия для слабовидящих!</p>
+        </blockquote>
+
+        <style>
+            #slide-2 p {
+                font-size: 42px;
+                line-height: 1.4;
+            }
+
+            #slide-2 blockquote {
+                width: 85%;
+                margin: 50px auto 0;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="slide-3">
+        <img src="/pictures/no.jpg" alt="no god please no" class="cover">
+    </section>
+
+    <section class="slide" id="slide-4">
+        <h2>Что такое «версия для слабовидящих»?</h2>
+        <img src="/pictures/blind.jpg" alt="blind-version">
+
+        <style>
+            #slide-4 img {
+                max-width: 100%;
+                height: 360px;
+                border: 3px solid var(--color-grey);
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="slide-7">
+        <div class="left-side">
+            <h2>Для кого делается ВДС?</h2>
+            <ul>
+                <li>Слабовидящие</li>
+                <li>Дальтоники</li>
+                <li>Дислексики</li>
+                <li>Незрячие</li>
+            </ul>
+        </div>
+        <img src="/pictures/jason.jpg" alt="dyslexic Jason">
+
+        <style>
+            #slide-7 {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+            }
+
+            #slide-7 img {
+                display: block;
+                width: 400px;
+                position: relative;
+                top: -25px;
             }
         </style>
     </section>
 
     <section class="slide">
-        <h2>Shower key features</h2>
+        <h2>Предполагаемая польза от ВДС</h2>
+        <ul>
+            <li>Настройка отображения под себя</li>
+            <li>Беспрепятственный доступ к информации</li>
+            <li>Расширение аудитории сайта</li>
+        </ul>
+    </section>
+
+    <section class="slide" id="slide-5">
+        <img src="/pictures/no.jpg" alt="no god please no" class="cover">
+    </section>
+
+    <section class="slide" id="slide-6">
+        <h2>ГОСТ Р 52872-2012</h2>
+        <p>Интернет-ресурсы. Требования доступности <mark>для инвалидов по&nbsp;зрению</mark></p>
+        <p>Введён 01.01.2014</p>
+    </section>
+
+    <section class="slide" id="slide-6">
+        <h2>Приказ Минкомсвязи России №483</h2>
+        <p>Об установлении Порядка обеспечения условий доступности <mark>для инвалидов по&nbsp;зрению</mark> официальных сайтов федеральных органов государственной власти, органов государственной власти субъектов Российской Федерации и&nbsp;органов местного самоуправления в&nbsp;сети «Интернет»</p>
+        <p>От 30.11.2015</p>
+    </section>
+
+    <section class="slide" id="slide-9">
+        <img src="/pictures/facts.jpg" alt="oxxxymiron versus johnyboy" class="cover">
+
+        <style>
+            #slide-9 .cover {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            #slide-9:after {
+                opacity: 0;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="slide-10">
+        <h2>Почему только для слабовидящих?</h2>
+        <img src="/pictures/cyborg.jpg" alt="Konstantin Deblikov">
+
+        <style>
+            #slide-10 img {
+                width: 100%;
+                height: 360px;
+                object-fit: cover;
+                object-position: 0 -120px;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="slide-6">
+        <h2>ГОСТ Р 52872-2019</h2>
+        <p>Интернет-ресурсы и&nbsp;другая информация, представленная в&nbsp;электронно-цифровой форме. Приложения для стационарных и&nbsp;мобильных устройств, иные пользовательские интерфейсы. Требования доступности для людей с&nbsp;инвалидностью и&nbsp;других лиц с&nbsp;ограничениями жизнедеятельности</p>
+        <p>Введён 01.04.2020. Разработан на основе WCAG 2.0.</p>
+    </section>
+
+    <section class="slide">
+        <blockquote>
+            Органы государственной власти в технических заданиях на проектирование и разработку интерфейсов своих официальных сайтов предусматривают наличие альтернативных текстовых версий таких сайтов (далее – версия для инвалидов по зрению), переход к которым осуществляется с главной страницы официального сайта <mark>в случае, если сам официальный сайт исходно не соответствует требованиям пункта 4 настоящего Порядка</mark>
+        </blockquote>
+    </section>
+
+    <section class="slide" id="slide-11">
+        <h2>Требования формальным языком</h2>
+        <ul>
+            <li><mark>нетекстовая информация и&nbsp;нетекстовые материалы</mark>, представленные на&nbsp;официальных сайтах органов государственной власти, должны присутствовать также и&nbsp;в&nbsp;версии для инвалидов по&nbsp;зрению <mark>в&nbsp;виде краткого описания такой нетекстовой информации</mark>, за&nbsp;исключением нетекстовой информации и&nbsp;нетекстовых материалов, используемых только с&nbsp;целью украшения и&nbsp;визуального оформления официальных сайтов органов государственной власти;</li>
+            <li><mark>графические файлы формата PDF</mark>, содержащие документы в&nbsp;графическом виде, представленные в&nbsp;разделах официальных сайтов органов государственной власти, должны присутствовать также и&nbsp;в&nbsp;версиях для инвалидов по&nbsp;зрению <mark>в&nbsp;текстовом формате</mark>;</li>
+            <li>наличие возможности <mark>изменения размеров текстовой информации до&nbsp;200%, шрифта, интервала между буквами (кернинг), а&nbsp;также цветовой схемы</mark>;</li>
+            <li>информация, относящаяся к&nbsp;работам (услугам) для инвалидов по&nbsp;зрению, должна быть представлена <mark>на&nbsp;уровне доступности специализированных интернет-ресурсов для инвалидов по&nbsp;зрению</mark>.</li>
+        </ul>
+
+        <style>
+            #slide-11 li {
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 10px;
+            }
+        </style>
+    </section>
+
+    <section class="slide">
+        <h2>Перевод на человеческий язык</h2>
+        <ul>
+            <li>Подписанные контентные изображения</li>
+            <li>Доступные PDF-вложения или их текстовые версии</li>
+            <li>Увеличение размера шрифта до 200%</li>
+            <li>Изменение расстояния между буквами</li>
+            <li>Изменение цветовой схемы</li>
+        </ul>
+    </section>
+
+    <section class="slide" id="slide-12">
+        <h2 class="shout shrink">И зачем тогда отдельная версия?</h2>
+
+        <style>
+            #slide-12 h2 {
+                font-size: 120px;
+            }
+        </style>
+    </section>
+
+    <section class="slide">
+        <h2>На что обратить внимание</h2>
         <ol>
-            <li>Built on HTML, CSS and JavaScript</li>
-            <li>Works in all modern browsers</li>
-            <li>Themes are separated from engine</li>
-            <li>Fully keyboard accessible</li>
-            <li>Printable to PDF</li>
+            <li class="next">Какими инструментами пользуются слабовидящие?</li>
+            <li class="next">Каким образом они просматривают сайты?</li>
+            <li class="next">Нужна ли слабовидящим отдельная версия?</li>
         </ol>
-        <p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
     </section>
 
     <section class="slide">
-        <h2>Plain text on your slides</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
+        <h2>Какие инструменты нужны слабовидящему</h2>
+        <ul>
+            <li>Скрин-зум</li>
+            <li>Экранная лупа</li>
+            <li>Тёмная тема</li>
+            <li>Для незрячих — скринридер</li>
+        </ul>
     </section>
 
     <section class="slide">
-        <h2>Two columns if you like</h2>
-        <div class="columns two">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+        <h2>Скрин-зум</h2>
+    </section>
+
+    <section class="slide">
+        <h2>Экранная лупа</h2>
+    </section>
+
+    <section class="slide">
+        <h2>Тёмная тема и режим высокой контрастности</h2>
+    </section>
+
+    <section class="slide" id="slide-23">
+        <div class="left-side">
+        <h2>Cкринридеры</h2>
+        <p>Windows:</p>
+        <ul>
+            <li>JAWS</li>
+            <li>NVDA</li>
+        </ul>
+
+        <p>MacOS:</p> 
+        <ul>
+            <li>VoiceOver</li>
+        </ul>
         </div>
+
+        <img src="/pictures/advokat.jpg" alt="gogen solntsev">
+
+        <style>
+            #slide-23 {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+            }
+
+            #slide-23 img {
+                display: block;
+                width: 350px;
+                border: 2px solid var(--color-grey);
+                margin-top: 20px;
+            }
+
+            #slide-23 p {
+                margin-bottom: 0;
+            }
+        </style>
     </section>
 
-    <section class="slide">
-        <h2>All kind of lists</h2>
-        <ol>
-            <li>Simple lists are marked with bullets</li>
-            <li>Ordered lists begin with a number</li>
-            <li>You can even nest lists one inside another
-                <ul>
-                    <li>Or mix their types</li>
-                    <li>But do not go too far</li>
-                    <li>Otherwise audience will be bored</li>
-                </ul>
-            </li>
-            <li>Look, seven rows exactly!</li>
-        </ol>
+    <section class="slide" id="slide-13">
+        <video src="/pictures/dima.mp4" controls muted class="cover"></video>
+
+        <style>
+            #slide-13 video {
+                max-width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        </style>
     </section>
 
-    <section class="slide">
-        <h2>Serious citations</h2>
+    <section class="slide" id="slide-15">
+        <h2>Нейропатия Лебера</h2>
+        <div class="columns two">
+            <figure>
+                <img src="/pictures/leber-1.jpg" alt="healthy vision">
+                <figcaption>Зрение здорового человека</figcaption>
+            </figure>
+            <figure>
+                <img src="/pictures/leber-2.jpg" alt="leber vision">
+                <figcaption>Зрение <strike>курильщика</strike> человека с&nbsp;нейропатией Лебера</figcaption>
+            </figure>
+        </div>
+
+        <style>
+            #slide-15 img {
+                max-width: 100%;
+            }
+
+            #slide-15 figcaption {
+                text-align: center;
+                line-height: 1.4;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="slide-17">
+        <h2>Сайт РЖД</h2>
+        <div class="columns two">
+            <figure>
+                <img src="/pictures/rzd.jpg" alt="healthy vision">
+                <figcaption>Обычная версия</figcaption>
+            </figure>
+            <figure>
+                <img src="/pictures/rzd-blind.jpg" alt="leber vision">
+                <figcaption>Версия для&nbsp;слабовидящих</figcaption>
+            </figure>
+        </div>
+
+        <style>
+            #slide-17 img {
+                max-width: 100%;
+                border: 2px solid var(--color-grey);
+            }
+
+            #slide-17 figcaption {
+                text-align: center;
+                line-height: 1.4;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="slide-16">
+        <img class="cover" src="/pictures/chinese.jpg" alt="mem chinese looks at the piece of paper">
+    </section>
+
+    <section class="slide" id="slide-18">
+        <h2>Сайт Aviasales</h2>
+        <div class="columns two">
+            <figure>
+                <img src="/pictures/avia-light.jpg" alt="aviasales light version">
+                <figcaption>Светлая тема</figcaption>
+            </figure>
+            <figure>
+                <img src="/pictures/avia-dark.jpg" alt="aviasales dark version">
+                <figcaption>Тёмная тема</figcaption>
+            </figure>
+        </div>
+
+        <style>
+            #slide-18 img {
+                max-width: 100%;
+            }
+
+            #slide-18 figcaption {
+                text-align: center;
+                line-height: 1.4;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="slide-cut">
+        <h2 class="shout shrink">Нет оформления<span>=</span>Нет информации</h2>
+
+        <style>
+            #slide-cut h2 {
+                font-size: 120px;
+            }
+
+            #slide-cut span {
+                display: block;
+                margin-top: 20px;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="slide-discr">
+        <h2 class="shout">Вместо инклюзивности<span>—</span>дискриминация</h2>
+
+        <style>
+            #slide-discr h2 {
+                font-size: 120px;
+                max-width: 90%;
+                left: 5%;
+            }
+            #slide-discr span {
+                display: block;
+                line-height: 0.5;
+                margin-top: 10px;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="slide-veg">
+        <img src="/pictures/vegan.jpg" alt="vegan cat" class="cover">
+    </section>
+
+    <section class="slide" id="slide-20">
         <figure>
             <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+                <p>Версиями для слабовидящих я&nbsp;не&nbsp;пользуюсь. Открываю — из&nbsp;любопытства и&nbsp;чтобы посмеяться. И&nbsp;переключаюсь обратно.</p>
             </blockquote>
-            <figcaption>Marcus Tullius Cicero</figcaption>
+            <figcaption>Дмитрий Глюз</figcaption>
         </figure>
-    </section>
 
-    <section class="slide">
-        <h2>Code samples</h2>
-        <pre>
-            <code>&lt;!DOCTYPE html&gt;</code>
-            <code class="mark">&lt;html lang="en"&gt;</code>
-            <code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-            <code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-            <code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-            <code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-            <code><mark>&lt;/head&gt;</mark></code>
-        </pre>
-    </section>
-
-    <section class="slide">
-        <h2>Even tables</h2>
-        <table>
-        <tr>
-            <th scope="col">Locavore</th>
-            <th>Umami</th>
-            <th>Helvetica</th>
-            <th>Vegan</th>
-        </tr>
-        <tr>
-            <th scope="row">Fingerstache</th>
-            <td>Kale</td>
-            <td>Chips</td>
-            <td>Keytar</td>
-        </tr>
-        <tr>
-            <th scope="row">Sriracha</th>
-            <td>Gluten-free</td>
-            <td>Ennui</td>
-            <td>Keffiyeh</td>
-        </tr>
-        <tr>
-            <th scope="row">Thundercats</th>
-            <td>Jean</td>
-            <td>Shorts</td>
-            <td>Biodiesel</td>
-        </tr>
-        <tr>
-            <th scope="row">Terry</th>
-            <td>Richardson</td>
-            <td>Swag</td>
-            <td>Blog</td>
-        </tr>
-        </table>
-        <p>It’s good to have information organized.</p>
-    </section>
-
-    <section class="slide" id="picture">
-        <h2>Pictures</h2>
-        <figure>
-            <img class="cover" src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up">
-            <figcaption class="copyright right white">
-                <a href="http://fiftyfootshadows.net/">© John Carey</a>
-            </figcaption>
-        </figure>
         <style>
-            #picture h2 {
-                color: white;
+            #slide-20 figure {
+                width: 85%;
+                margin: 80px auto 0;
+            }
+
+            #slide-20 blockquote {
+                font-size: 35px;
+                line-height: 1.7;
             }
         </style>
     </section>
 
     <section class="slide">
-        <h2 class="shout shrink">You can even shout this way</h2>
+        <h2>Почему ВДС — это плохая идея?</h2>
+        <ul>
+            <li>Это не универсальное решение, т.к. существуют разные виды нарушений зрения</li>
+            <li>Вместо инклюзивности — дискриминация</li>
+            <li>За слабовидящего уже кто-то решил, что ему видеть, а что — нет</li>
+            <li>Дополнительные затраты на дизайн, разработку, тестирование, поддержку</li>
+            <li>По закону будет достаточно доступного основного сайта</li>
+            <li class="next">Слабовидящие всё равно не пользуются отдельными версиями</li>
+        </ul>
+    </section>
+
+    <section class="slide" id="slide-12">
+        <h2 class="shout shrink">И зачем тогда отдельная версия?</h2>
+
+        <style>
+            #slide-12 h2 {
+                font-size: 120px;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="slide-22">
+        <h2>Имитаторы нарушений зрения</h2>
+        <div class="columns two">
+            <figure>
+                <img src="/pictures/imitate-browser.jpg" alt="browser extensions">
+                <figcaption>Браузерные расширения</figcaption>
+            </figure>
+            <figure>
+                <img src="/pictures/imitate-console.jpg" alt="developer tools">
+                <figcaption>Инструменты разработчика</figcaption>
+            </figure>
+        </div>
+
+        <style>
+            #slide-22 img {
+                max-width: 100%;
+                border: 2px solid var(--color-grey)
+            }
+
+            #slide-22 figcaption {
+                text-align: center;
+            }
+        </style>
     </section>
 
     <section class="slide">
-        <h2>Inner navigation</h2>
-        <ol>
-            <li>Lets you reveal list items one by one</li>
-            <li class="next">To keep some key points</li>
-            <li class="next">In secret from audience</li>
-            <li class="next">But it will work only once</li>
-            <li class="next">Nobody wants to see the same joke twice</li>
-        </ol>
+        <h2>Не забываем про клавиатурный фокус</h2>
     </section>
 
-    <section class="slide" id="see-more">
-        <h2 class="shout">
-            <img src="pictures/logo.svg" alt="Shower logo">
-            <a href="https://github.com/shower/shower">See more on GitHub</a>
-        </h2>
+    <section class="slide">
+        <h2>Проверка с валидаторами и чеклистами</h2>
+        <ul>
+            <li><a href="https://validator.w3.org/">Валидатор W3C</a></li>
+            <li><a href="https://wave.webaim.org/">WAVE</a></li>
+            <li>Вкладка Accessibility в панели разработчика</li>
+            <li>Чеклисты, шпаргалки по скринридерам, ссылки на примеры реализации — 
+                <a href="http://gov.design/blog/2016/11/08/accessibility.html">статья на gov.design</a></li>
+        </ul>
+    </section>
+
+    <section class="slide" id="slide-26">
+        <div class="left-side">
+            <h2>Я проникся, что дальше?</h2>
+            <ul>
+                <li class="next">Пытаться вести диалог</li>
+                <li class="next">Самому делать доступно</li>
+                <li class="next">Терпеть</li>
+                <li class="next">В крайнем случае — менять работу</li>
+            </ul>
+        </div>
+        <img src="/pictures/tasks.jpg" alt="where are tasks">
+
         <style>
-            #see-more h2 {
-                font-size: 100px
+            #slide-26 {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
             }
 
-            #see-more img {
-                width: 0.72em;
-                height: 0.72em;
+            #slide-26 img {
+                display: block;
+                width: 310px;
+                margin-top: 5px;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="slide-24">
+        <h2>Где научиться?</h2>
+
+        <p>
+            Курс Валерии Курмак про цифровую доступность<br>
+            <a href="https://www.kurmak.info/">kurmak.info</a>
+        </p>
+
+        <p>Ближайший поток — с 6 февраля по 6 марта 2021 года</p>
+    </section>
+
+    <section class="slide" id="slide-27">
+        <img src="/pictures/you-dont-need.jpg" class="cover" alt="you dont need">
+
+        <style>
+            #slide-27 img {
+                height: 100%;
+                object-fit: center;
+            }
+
+            #slide-27:after {
+                opacity: 0;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="slide-14">
+        <h3>Lena Ryan</h3>
+        <p>Twitter: <a href="https://twitter.com/metalwebdev">@metalwebdev</a></p>
+        <p>Telegram: <a href="https://t.me/russian_plazma_drink">@russian_plazma_drink</a></p>
+
+        <h3>Telegram-канал Валерии Курмак</h3>
+        <a href="https://t.me/neiskluchenie">Не исключение</a>
+
+        <p style="margin-top:25px;">Дмитрий Глюз в Instagram: <a href="https://www.instagram.com/dima_volzhsky/">@dima_volzhsky</a></p>
+
+        <style>
+            #slide-14 h3 {
+                margin-bottom: 0;
+                color: #333;
+                font-size: 30px;
+            }
+
+            #slide-14 p {
+                margin-bottom: 0;
+            }
+
+            #slide-14 a {
+                font-size: 27px;
             }
         </style>
     </section>
