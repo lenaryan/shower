@@ -66,8 +66,7 @@
             display: none;
         }
         .slide {
-            background-color: black;
-            /* background-color: grey; */
+            background-color: #131313;
             padding-top: 60px;
         }
         .slide a {
@@ -337,9 +336,19 @@
                 <li class="next">Специально обученный человек</li>
                 <li class="next">Используем tabindex везде</li>
                 <li class="next">Нет таких клиентов</li>
-                <li class="next">Человек либо полностью здоров, либо с&nbsp;ограничениями</li>
+                <li class="next">Либо полностью здоров, либо с&nbsp;ограничениями</li>
             </ul>
         </div>
+    </section>
+
+    <section class="slide" id="facts-0">
+        <img src="pictures/facts-0.jpg" alt="oxxxymiron" class="cover">
+
+        <style>
+            #facts-0:after {
+                opacity: 0;
+            }
+        </style>
     </section>
 
     <section class="slide" id="disab">
@@ -351,6 +360,104 @@
                 margin: 0 auto;
                 max-width: 100%;
                 height: 460px;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="no-clients">
+        <h2>Нет таких клиентов? Точно?</h2>
+        <img src="pictures/blind-act-1.jpg" class="blind-1" alt="blind activities">
+        <img src="pictures/blind-act-2.webp" class="blind-2 next" alt="blind activities">
+        <img src="pictures/blind-act-3.jpg" class="blind-3" alt="blind activities">
+
+        <style>
+            #no-clients img {
+                position: absolute;
+                width: 400px;
+            }
+
+            #no-clients .blind-2 {
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 1;
+                bottom: 50px;
+                box-shadow: 0 0 3px 1px var(--color-grey);
+            }
+
+            #no-clients .blind-3 {
+                right: 50px;
+            }
+        </style>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout"><span style="color: var(--color-red)">tabindex</span> зло</h2>
+    </section>
+
+    <section class="slide" id="rick">
+        <h2>Легко внедрить после релиза</h2>
+        <img class="rick" src="pictures/rick.jpg" alt="rick and morty">
+        <img class="rick1 next" src="pictures/rick1.jpg" alt="rick and morty">
+
+        <style>
+            #rick .rick {
+                height: 360px;
+            }
+
+            #rick .rick1 {
+                position: absolute;
+                top: 30px;
+                left: 5%;
+                box-shadow: 0 0 3px 1px var(--color-grey);
+                width: 90%;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="long">
+        <h2>Долго и дорого?</h2>
+
+        <ul>
+            <li class="next">10-15 дней на изучение</li>
+            <li class="next">Время задачи + 5-7%</li>
+            <li class="next">Все счастливы</li>
+        </ul>
+
+        <style>
+            #long ul {
+                margin-top: 50px;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="spec">
+        <h2>Специально обученный человек</h2>
+
+        <p class="spec next">Тогда это будет долго и дорого :)</p>
+
+        <style>
+            #spec .spec {
+                text-align: center;
+                font-size: 40px;
+                margin-top: 140px;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="slide-10">
+        <h2>Почему только слабовидящие?</h2>
+        <img src="pictures/cyborg.jpg" alt="Konstantin Deblikov">
+        <a href="https://www.instagram.com/bionic_russia/" class="copyright">@bionic_russia</a>
+
+        <style>
+            #slide-10 img {
+                width: 100%;
+                object-fit: cover;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                object-position: 0 -165px;
+                height: 400px;
             }
         </style>
     </section>
@@ -592,24 +699,6 @@
         </style>
     </section>
 
-    <section class="slide" id="slide-10">
-        <h2>Почему только для&nbsp;слабовидящих?</h2>
-        <img src="pictures/cyborg.jpg" alt="Konstantin Deblikov">
-        <a href="https://www.instagram.com/bionic_russia/" class="copyright">@bionic_russia</a>
-
-        <style>
-            #slide-10 img {
-                width: 100%;
-                object-fit: cover;
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                object-position: 0 -165px;
-                height: 400px;
-            }
-        </style>
-    </section>
-
     <section class="slide" id="slide-gosts">
         <h2 class="shout">
             <strike>ГОСТ Р 52872-2012</strike>
@@ -743,12 +832,10 @@
             #slide-zoom .pic-1 {
                 margin-right: 30px;
                 width: 60%;
-                box-shadow: 0 0 3px 1px var(--color-grey);
             }
 
             #slide-zoom .pic-2 {
                 width: 35%;
-                box-shadow: 0 0 3px 1px var(--color-grey);
             }
         </style>
     </section>
@@ -1171,7 +1258,7 @@
 
         <style>
             #gov-code pre code:before {
-                color: black;
+                color: white;
             }
 
             #gov-code pre code {
@@ -1241,7 +1328,7 @@
             }
 
             #kur-code pre code:before {
-                color: black;
+                color: white;
             }
         </style>
     </section>
